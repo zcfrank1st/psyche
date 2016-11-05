@@ -4,8 +4,10 @@ import io.vertx.core.Vertx;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.datagram.DatagramSocket;
 import io.vertx.core.datagram.DatagramSocketOptions;
+import org.apache.http.client.fluent.Request;
 import org.inferred.freebuilder.FreeBuilder;
 
+import java.io.IOException;
 import java.util.function.Consumer;
 
 /**
@@ -43,6 +45,20 @@ interface Psyche {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                }
+            }).run();
+
+            new Thread(() -> {
+                try {
+                    Thread.sleep(10000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    Request.Get("http://" + psyche.getHost() + ":9009/pull/" + psyche.getUniqueId()).execute();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }).run();
 

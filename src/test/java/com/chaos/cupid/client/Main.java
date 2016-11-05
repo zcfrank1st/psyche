@@ -11,9 +11,9 @@ public class Main {
 
         new Psyche.Builder()
                 .setConsumer(printIt)
-                .setHost("localhost")
+                .setHost("192.168.33.213")
                 .setPort(55055)
-                .setUniqueId("mid1112")
+                .setUniqueId("master123")
                 .build();
     }
 }

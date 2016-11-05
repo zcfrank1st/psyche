@@ -1,16 +1,18 @@
 package com.chaos.cupid.client;
 
-import java.util.function.Consumer;
-
 /**
  * Created by zcfrank1st on 04/11/2016.
  */
 public class Main {
     public static void main(String[] args) {
-        Consumer<String> printIt = System.out::println;
 
-        new Psyche.Builder()
-                .setConsumer(printIt)
+        new PsycheV2.Builder()
+                .setProcessor(new Processor() {
+                    @Override
+                    public void notify(String message) {
+                        System.out.println(message);
+                    }
+                })
                 .setHost("192.168.33.213")
                 .setPort(55055)
                 .setUniqueId("master123")

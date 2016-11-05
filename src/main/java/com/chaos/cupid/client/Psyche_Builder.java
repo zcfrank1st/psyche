@@ -15,7 +15,7 @@ import javax.annotation.Generated;
  * derived from the API of {@link Psyche}.
  */
 @Generated("org.inferred.freebuilder.processor.CodeGenerator")
-abstract class Psyche_Builder {
+public abstract class Psyche_Builder {
 
   /**
    * Creates a new builder using {@code value} as a template.

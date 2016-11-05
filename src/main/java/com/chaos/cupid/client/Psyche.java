@@ -14,7 +14,7 @@ import java.util.function.Consumer;
  * Created by zcfrank1st on 04/11/2016.
  */
 //@FreeBuilder
-interface Psyche {
+public interface Psyche {
     String getHost();
     Integer getPort();
     String getUniqueId();

@@ -2,7 +2,7 @@
 
 * Description
 
-    A [cupid](https://github.com/zcfrank1st/cupid) client.
+    A [cupid](https://github.com/zcfrank1st/cupid) client.(jdk8)
 
 * How to use
 

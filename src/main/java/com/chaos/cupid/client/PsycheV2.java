@@ -47,7 +47,7 @@ public class PsycheV2 {
         processor = b.processor;
     }
 
-    static class Builder  {
+    public static class Builder  {
         private String host;
         private Integer port;
         private String uniqueId;
